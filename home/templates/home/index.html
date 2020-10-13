@@ -1,11 +1,246 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" />
+    <title>Eveline Cleaning Services</title>
+    <style>
+        .landing-page{
+            background: url("media/10.jpg") no-repeat;
+            background-size: cover;
+}
+        }
+    </style>
 </head>
 <body>
+    <!--Navbar-->
+
+    <header>        
+            <div class="container-md pt-3 pb-md-4">
+                <div class="d-none d-md-inline-block pt-2">
+                    <span class=""><img src="{{ MEDIA_URL }}logo6.jpg"></span>
+                </div>
+                <div class="d-md-inline-block float-md-right">
+                    <div class="d-inline-block pr-1">
+                        <i class="fas fa-envelope-open-text font-md font-sm font-color-blue"></i>
+                    </div>
+                    <div class="d-inline-block">
+                        <p class="mb-0 d-none d-md-block font-weight-bold">Mail to us</p>
+                        <p class="mb-1 font-weight-bold">eveline@pro.co.uk</p>
+                    </div>
+                </div>
+                <div class="d-md-inline-block float-md-right pr-5">
+                    
+                    <div class="d-inline-block pr-1">
+                        <i class="fas fa-mobile-alt font-md font-sm font-color-blue"></i>
+                    </div>
+                    <div class="d-inline-block">
+                        <p class="mb-0 d-none d-md-block font-weight-bold">Call us</p>
+                        <p class="mb-1 letter-space font-weight-bold">07415961995</p>
+                    </div>
+                </div>                
+            </div>
+            <!-- Logo -->
+            <div class="container-fluid pl-2 d-block d-md-none">                    
+                <img src="{{ MEDIA_URL }}logo6.jpg" class="w-65">
+            </div>        
+        <nav class="navbar navbar-expand-sm bg-color3 mt-2">
+            
+            <button class="navbar-toggler mr-auto" type="button" id="navButton" data-toggle="collapse" data-target="#navbarNav" 
+                                                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><i class="fas fa-bars hamburger"></i></span>        
+            </button>
+            
+            <div class="collapse navbar-collapse change" id="navbarNav">
+                <ul class="navbar-nav center-nav-items ml-md-auto bg-color3">
+                    <li class="nav-item active pr-3">
+                        <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item pr-2">
+                        <a class="nav-link" href="#our-services">Our services</a>
+                    </li>
+                    <li class="nav-item pr-2">
+                        <a class="nav-link" href="#about">About us</a>
+                    </li>                    
+                    <li class="nav-item pr-2">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
     
+
+
+    <!--Landing page-->
+
+    <div class="container-fluid landing-page">
+        <div class="row">
+            <div class="col-12">
+
+                <p class="quote-landing quote-mark text-center">Don't you have time to clean up?<br> Our professional cleaners will get it done for you !</p>
+                
+            </div>
+        </div>
+    </div>
+
+    <!--About us-->
+    <div class="container-fluid py-md-5">
+        <div class="container container-about-us" id="about">
+
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text-center py-3 py-sm-5 font-weight-bold">Eveline Cleaning Services</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p class="">Since March 2017, in response to market demand, we provide broadly understood cleaning services. 
+                                    We are cleaning for companies, laboratories, 
+                                    medical facilities, as well as cleaning for individual clients: houses and apartments.
+                                    We operate in Birmingham and the surrounding areas.
+                                    We offer not only standard cleaning services, but we also provide ironing service at your home.
+                                    We are pride ourselves on keeping delivering domestic cleaning that leaves your home sparkling every week! 
+                    </p>                                       
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <!-- Our services  -->
+
+    <div class="container-fluid" id="our-services">       
+            <div class="row mb-5">
+                <div class="col-12 py-3">
+                    <h1 class="text-center font-weight-bold">Our services</h1>
+                </div>
+            </div>
+            <!-- Cleaning office row -->
+            <div class="row py-5 bg-color5">
+                <div class="container">
+                    <div class="row">         
+                        <div class="col-12 col-md-5 order-last">
+                            <img src="{{ MEDIA_URL }}office.jpg" alt="Cleaning office" class="">
+                        </div>
+                        <div class="col-12 col-md-7 order-first">
+                            <h4>Professional cleaning for businesses</h4>
+                            <p class="">
+                                We provide comprehensive office space cleaning services.
+                                We professionally care for company facilities, offices and factories. 
+                                We operate in the area of Birmingham. 
+                                Our cleaning service ensures perfect cleanliness not only of offices but also clinics, laboratories and restaurants. 
+                                We individually set the date and cost of cleaning, flexibly adapting to your company's working hours.                                
+                            </p>                            
+                        </div>
+                    </div>
+                </div>  
+            </div>
+            <!-- Cleaning a hosue row -->         
+            <div class="row py-5">
+                <div class="container">                               
+                    <div class="row">             
+                        <div class="col-12 col-md-5 order-last order-md-last">
+                            <img src="{{ MEDIA_URL }}house.jpg" alt="Cleaning house">
+                        </div>
+                        <div class="col-md-7 order-first order-md-last"> 
+                            <h4>Apartments and house cleaning</h4>
+                            <p class="">
+                                You don't have to worry about bringing your apartment or house to your dream cleanliness. 
+                                By using our professional cleaning services, you will get rid of the clutter! 
+                                Customer satisfaction is our priority, which is why we are always guided by professionalism in cleaning. 
+                                Depending on your needs, we can implement them periodically or only when you decide that you need us.
+                            </p>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Ironing service -->
+            <div class="row py-5 bg-color5">
+                <div class="container">                                
+                    <div class="row">             
+                        <div class="col-12 col-md-5 order-last">
+                            <img src="{{ MEDIA_URL }}ironing.jpg" alt="Ironing">
+                        </div>
+                        <div class="col-md-7 order-first">
+                            <h4>Ironing service</h4> 
+                            <p class="">
+                                We understand that ironing might be tedious, especially after a busy day at work or
+                                you don't like doing it. In both cases, we have a solution for people like you.
+                                We can press it for you while cleaning your house.
+                            </p>                            
+                        </div>
+                    </div>
+                </div>
+            </div>            
+    </div>
+    
+    <!--Contact -->
+
+    <div class="container-fluid">
+        <div class="container container-contact" id="contact">
+            <div class="row">
+                <div class="col-12 pb-5">
+                    <h1 class="text-center font-weight-bold">Contact</h1>
+                </div>
+            </div>
+            <div class="row" id="join"></div>
+            <div class="col-12">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-3 offset-md-3">
+                            <label for="inputName">First name</label>
+                            <input type="text" class="form-control" id="Name" required>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="inputLastName">LastName</label>
+                            <input type="text" class="form-control" id="LastName">
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6 offset-md-3 px-0">
+                            <label for="inputPhoneNumber">Phone number</label>
+                            <input type="text" class="form-control" id="inputPhoneNumber">
+                    </div>                        
+                    <div class="form-group col-md-6 offset-md-3 px-0">
+                        <label for="inputMessage">Message</label>
+                        <textarea class="form-control" id="inputMessage" rows="3"></textarea>
+                    </div>
+                    <br>
+                    <input type="submit" value="Send" class="btn btn-send offset-md-3">    
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Footer-->
+
+    <footer class="container-fluid bg-color5">
+        <div class="row pt-4">
+            <div class="col-12">
+                <h4 class="text-center pb-2 font-weight-bold">Follow us on media</h4>
+                <ul class="list-inline text-center ">
+                    <li class="list-inline-item">
+                        <a target="_blank" href="#">
+                            <i class="fab fa-facebook-square font-color-blue"></i>
+                            <span class="sr-only">Facebook</span>
+                        </a>
+                    </li>                    
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/3506f961d0.js" crossorigin="anonymous"></script>
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>
