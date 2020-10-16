@@ -191,24 +191,25 @@
             </div>
             <div class="row" id="join"></div>
             <div class="col-12">
-                <form>
+                <form action="{% url 'home' %}" method="POST">
+                {% csrf_token %}
                     <div class="form-row">
                         <div class="form-group col-md-3 offset-md-3">
                             <label for="inputName">First name</label>
-                            <input type="text" class="form-control" id="Name" required>
+                            <input type="text" class="form-control" id="Name" name="first-name" required>
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputLastName">LastName</label>
-                            <input type="text" class="form-control" id="LastName">
+                            <input type="text" class="form-control" id="LastName" name="last-name">
                         </div>
                     </div>
                     <div class="form-group col-md-6 offset-md-3 px-0">
                             <label for="inputPhoneNumber">Phone number</label>
-                            <input type="text" class="form-control" id="inputPhoneNumber">
+                            <input type="text" class="form-control" id="inputPhoneNumber" name="phone-number">
                     </div>                        
                     <div class="form-group col-md-6 offset-md-3 px-0">
                         <label for="inputMessage">Message</label>
-                        <textarea class="form-control" id="inputMessage" rows="3"></textarea>
+                        <textarea class="form-control" id="inputMessage" rows="3" name="message"></textarea>
                     </div>
                     <br>
                     <input type="submit" value="Send" class="btn btn-send offset-md-3">    
