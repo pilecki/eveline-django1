@@ -56,6 +56,18 @@ body {
         font-size: 1rem !important;
     }
 }
+.logo {
+    border-radius: 35%;
+    background-color:  #28b6f6;
+    font-family: 'Roboto Slab', serif;
+}
+
+@media only screen and (max-width: 767px) {
+    .logo-sm {
+        padding: 0 0.75rem !important;
+    }
+}
+
 /*Navbar*/
 
 
